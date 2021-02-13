@@ -132,6 +132,10 @@ $line = new Line('YOUR-API-TOKEN-HERE');
 $line->send('message');
 ```
 
+## Screenshot
+
+<h1 align="center"><img src="/art/screenshot.jpg" alt="Screenshot"></h1>
+
 ## License
 
 The MIT License (MIT)
