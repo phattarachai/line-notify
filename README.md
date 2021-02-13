@@ -74,6 +74,8 @@ return [
 Send a message via Line Notify.
 
 ```php
+use Phattarachai\LineNotify\Facade\Line;
+
 Line::send('message');
 ```
 
