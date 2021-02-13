@@ -38,10 +38,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Phattarachai\\Line\\LineServiceProvider"
+        "Phattarachai\\LineNotify\\LineServiceProvider"
       ],
       "aliases": {
-        "Line": "Phattarachai\\Line\\Facade"
+        "Line": "Phattarachai\\LineNotify\\Facade"
       }
     }
   },
