@@ -16,13 +16,13 @@ class LineNotifyServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/line.php', 'line');
+        $this->mergeConfigFrom(__DIR__ . '/../config/line-notify.php', 'line-notify');
 
         $this->app->singleton(Line::class, function () {
-            $token = config('line.access_token');
+            $token = config('line-notify.access_token');
 
             if ($token === null) {
-                throw new \Exception('Please specify line access token in config/line.php');
+                throw new \Exception('Please specify line-notify access token in config/line-notify.php');
             }
 
             return new Line($token);
@@ -32,7 +32,7 @@ class LineNotifyServiceProvider extends ServiceProvider
     protected function registerPublishables(): void
     {
         $this->publishes([
-            __DIR__ . '/../config/media-library.php' => config_path('media-library.php'),
+            __DIR__ . '/../config/line-notify.php' => config_path('line-notify.php'),
         ], 'config');
     }
 

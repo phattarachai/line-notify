@@ -56,14 +56,14 @@ Run the following Artisan command in your terminal:
 php artisan vendor:publish --provider="Phattarachai\LineNotify\LineNotifyServiceProvider"
 ```
 
-Now you have a `config/line.php` config file, where you can set the access token for your application. You can get an
-access token for your application from [Line Notify API](https://notify-bot.line.me/my/)
+Now you have a `config/line-notify.php` config file, where you can set the access token for your application. You can
+get an access token for your application from [Line Notify API](https://notify-bot.line.me/my/)
 
-After published a configuration file to your `config/line.php`. You can set an variable to your .env or set it in you
-config file.
+After published a configuration file to your `config/line-notify.php`. You can set an variable to your .env or set it in
+you config file.
 
 ```php
-// File: /config/line.php
+// File: /config/line-notify.php
 return [
     'access_token' => env('LINE_ACCESS_TOKEN', null),
 ];
