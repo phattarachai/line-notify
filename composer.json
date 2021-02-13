@@ -41,7 +41,7 @@
         "Phattarachai\\LineNotify\\LineNotifyServiceProvider"
       ],
       "aliases": {
-        "Line": "Phattarachai\\LineNotify\\Facade"
+        "Line": "Phattarachai\\LineNotify\\Facade\\Line"
       }
     }
   },
