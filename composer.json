@@ -38,7 +38,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Phattarachai\\LineNotify\\LineServiceProvider"
+        "Phattarachai\\LineNotify\\LineNotifyServiceProvider"
       ],
       "aliases": {
         "Line": "Phattarachai\\LineNotify\\Facade"
