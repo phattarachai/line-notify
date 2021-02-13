@@ -9,16 +9,20 @@ use GuzzleHttp\Exception\GuzzleException;
 
 class Line
 {
-
-    protected $client;
-    protected $token;
+    protected Client $client;
+    protected string $token;
+    protected ?string $thumbnailUrl = null;
+    protected ?string $imageUrl = null;
+    protected bool $notificationDisabled = false;
+    protected ?int $stickerPackageId = null;
+    protected ?int $stickerId = null;
 
     const URL = 'https://notify-api.line.me/api/notify';
 
-    public function __construct()
+    public function __construct(string $token = '')
     {
         $this->client = new Client;
-
+        $this->token = $token;
     }
 
     /**
@@ -26,13 +30,45 @@ class Line
      *
      * @param string $token the token of Line notify
      */
-    public function setToken($token)
+    public function setToken(string $token)
     {
         $this->token = $token;
     }
 
+    public function thumbnailUrl(string $url): Line
+    {
+        $this->thumbnailUrl = $url;
+        return $this;
+    }
+
+    public function imageUrl(string $url): Line
+    {
+        $this->imageUrl = $url;
+        return $this;
+    }
+
+    public function sticker(int $sticker_package_id, int $sticker_id)
+    {
+        $this->stickerPackageId = $sticker_package_id;
+        $this->stickerId = $sticker_id;
+
+        return $this;
+    }
+
+    public function disableNotification(): Line
+    {
+        $this->notificationDisabled = true;
+        return $this;
+    }
+
+    public function enableNotification(): Line
+    {
+        $this->notificationDisabled = false;
+        return $this;
+    }
+
     /**
-     * Send text message, image or sticker on Line notify
+     * Send Line text message.
      *
      * @param string $message text message on Line notify can not be empty
      * @return boolean success or fail on send Line notify message
@@ -40,30 +76,78 @@ class Line
      */
     public function send(string $message): bool
     {
+        $response = $this->client->request('POST', static::URL, $this->params($message));
 
-        if (empty($message)) {
-            return false;
-        }
+        return $this->isSuccess($response);
+    }
 
-        $response = $this->client->request('POST', static::URL, [
+    /**
+     * @param \Psr\Http\Message\ResponseInterface $response
+     * @return bool
+     * @throws \JsonException
+     */
+    protected function isSuccess(\Psr\Http\Message\ResponseInterface $response): bool
+    {
+        $json = json_decode((string)$response->getBody(), true, 512, JSON_THROW_ON_ERROR);
+
+        return isset($json['status']) && $json['status'] === 200;
+    }
+
+    /**
+     * @param string $message
+     * @return array
+     */
+    protected function params(string $message): array
+    {
+        return [
             'headers' => [
                 'Authorization' => 'Bearer ' . $this->token,
             ],
-            'multipart' => [
-                [
-                    'name' => 'message',
-                    'contents' => $message
-                ]
-            ]
-        ]);
+            'multipart' => $this->multipartParams($message)
+        ];
+    }
 
-        if ($response->getStatusCode() !== 200) {
-            throw new \RuntimeException($response->getBody()->getContents());
+    private function multipartParams(string $message)
+    {
+
+        $multipart = [
+            [
+                'name' => 'message',
+                'contents' => $message
+            ],
+            [
+                'name' => 'notificationDisabled',
+                'contents' => $this->notificationDisabled ? 1 : 0
+            ]
+        ];
+
+        if ($this->imageUrl !== null) {
+
+            $multipart[] = [
+                'name' => 'imageThumbnail',
+                'contents' => $this->thumbnailUrl ?? $this->imageUrl
+            ];
+
+            $multipart[] = [
+                'name' => 'imageFullsize',
+                'contents' => $this->imageUrl
+            ];
         }
 
-        $json = json_decode((string)$response->getBody(), true, 512, JSON_THROW_ON_ERROR);
+        if ($this->stickerId !== null) {
 
-        return !(empty($json['status']) || empty($json['message']));
+            $multipart[] = [
+                'name' => 'stickerPackageId',
+                'contents' => $this->stickerPackageId
+            ];
+
+            $multipart[] = [
+                'name' => 'stickerId',
+                'contents' => $this->stickerId
+            ];
+        }
+
+        return $multipart;
     }
 
 }
