@@ -14,6 +14,8 @@ Line Notify is a package for Laravel and PHP application to easily send notifica
 or groups. It builds on top of [Line Notify API](https://notify-bot.line.me/doc/en/), that provides a fluent interface
 to send messages, images ,and stickers directly to Line service from Laravel and PHP.
 
+A project by [phattarachai.dev](https://phattarachai.dev)
+
 [comment]: <> (If my package make your life easier, please consider:)
 
 [comment]: <> (<a href="https://ko-fi.com/A36513JF" target="_blank">Buy me a Coffee</a> |)
