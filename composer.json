@@ -1,0 +1,49 @@
+{
+  "name": "phattarachai/line-notify",
+  "description": "PHP and Laravel API for Line application notification.",
+  "type": "library",
+  "keywords": [
+    "phattarachai",
+    "line",
+    "line-notify",
+    "PHP",
+    "Laravel"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "phattarachai",
+      "email": "phatchai28@gmail.com"
+    }
+  ],
+  "homepage": "https://github.com/phattarachai/line-notify",
+  "require": {
+    "php": "^7.3|^8.0",
+    "guzzlehttp/guzzle": "^7.2",
+    "illuminate/support": "^7.0|^8.0",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Phattarachai\\LineNotify\\": "src"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Spatie\\MediaLibrary\\MediaLibraryServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
