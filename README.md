@@ -134,7 +134,7 @@ $line->send('message');
 
 ## Screenshot
 
-<h1 align="center"><img src="/art/screenshot.jpg" alt="Screenshot"></h1>
+<h1 align="center"><img src="/art/screenshot.jpg" alt="Screenshot" width="50%"></h1>
 
 ## License
 
