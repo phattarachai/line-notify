@@ -21,6 +21,10 @@ class LineNotifyServiceProvider extends ServiceProvider
         $this->app->singleton(Line::class, function () {
             $token = config('line.access_token');
 
+            if ($token === null) {
+                throw new \Exception('Please specify line access token in config/line.php');
+            }
+
             return new Line($token);
         });
     }
