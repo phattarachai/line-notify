@@ -13,6 +13,7 @@ class Line
     protected string $token;
     protected ?string $thumbnailUrl = null;
     protected ?string $imageUrl = null;
+    protected ?string $imagePath = null;
     protected bool $notificationDisabled = false;
     protected ?int $stickerPackageId = null;
     protected ?int $stickerId = null;
@@ -44,6 +45,12 @@ class Line
     public function imageUrl(string $url): Line
     {
         $this->imageUrl = $url;
+        return $this;
+    }
+
+    public function imagePath(string $path): Line
+    {
+        $this->imagePath = $path;
         return $this;
     }
 
@@ -120,6 +127,15 @@ class Line
                 'contents' => $this->notificationDisabled ? 1 : 0
             ]
         ];
+
+        if ($this->imagePath !== null) {
+
+            $multipart[] = [
+                'name' => 'imageFile',
+                'contents' => fopen($this->imagePath, 'r')
+            ];
+            
+        }
 
         if ($this->imageUrl !== null) {
 

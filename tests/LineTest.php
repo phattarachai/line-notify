@@ -42,6 +42,13 @@ class LineTest extends \PHPUnit\Framework\TestCase
         $this->line->imageUrl('https://me.phattarachai.dev/wp-content/uploads/2021/02/laravel8-1.jpg')
             ->send('ข้อความ และ Image');
 
+        self::assertTrue(true);
+    }
+
+    public function test_upload_image()
+    {
+        $this->line->imagePath(__DIR__ . '/../art/line-notify-banner.jpg')
+            ->send('ข้อความ และ Upload Image');
 
         self::assertTrue(true);
     }
