@@ -18,7 +18,7 @@ A project by [phattarachai.dev](https://phattarachai.dev)
 
 If my package make your life easier, please consider:
 
-<a href="https://ko-fi.com/phattarachai" target="_blank">Buy me a Coffee</a> |
+<a href="https://ko-fi.com/phattarachai#checkoutModal" target="_blank">Buy me a Coffee</a> |
 
 <a href="https://twitter.com/phatchai" target="_blank">Follow Me on Twitter</a>
 
