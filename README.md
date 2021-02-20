@@ -16,11 +16,11 @@ to send messages, images ,and stickers directly to Line service from Laravel and
 
 A project by [phattarachai.dev](https://phattarachai.dev)
 
-[comment]: <> (If my package make your life easier, please consider:)
+If my package make your life easier, please consider:
 
-[comment]: <> (<a href="https://ko-fi.com/A36513JF" target="_blank">Buy me a Coffee</a> |)
+<a href="https://ko-fi.com/phattarachai" target="_blank">Buy me a Coffee</a> |
 
-[comment]: <> (<a href="https://twitter.com/corcelphp" target="_blank">Follow Corcel on Twitter</a>)
+<a href="https://twitter.com/phatchai" target="_blank">Follow Me on Twitter</a>
 
 # <a id="installing-line-notify"></a> Installing Line Notify
 
