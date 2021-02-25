@@ -14,14 +14,6 @@ Line Notify is a package for Laravel and PHP application to easily send notifica
 or groups. It builds on top of [Line Notify API](https://notify-bot.line.me/doc/en/), that provides a fluent interface
 to send messages, images ,and stickers directly to Line service from Laravel and PHP.
 
-A project by [phattarachai.dev](https://phattarachai.dev)
-
-If my package make your life easier, please consider:
-
-<a href="https://ko-fi.com/phattarachai#checkoutModal" target="_blank">Buy me a Coffee</a> |
-
-<a href="https://twitter.com/phatchai" target="_blank">Follow Me on Twitter</a>
-
 # <a id="installing-line-notify"></a> Installing Line Notify
 
 You need to use Composer to install Line-Notify into your project:
@@ -145,6 +137,16 @@ $line->send('message');
 ## Screenshot
 
 <h1 align="center"><img src="/art/screenshot.jpg" alt="Screenshot" width="50%"></h1>
+
+## Credit
+
+A project by [phattarachai.dev](https://phattarachai.dev)
+
+If my package make your life easier, please consider:
+
+<a href="https://ko-fi.com/phattarachai#checkoutModal" target="_blank">Buy me a Coffee</a> |
+
+<a href="https://twitter.com/phatchai" target="_blank">Follow Me on Twitter</a>S
 
 ## License
 
