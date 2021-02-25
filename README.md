@@ -83,8 +83,8 @@ required to provide a message for the API.
 
 ### <a name="config-publish"></a> Publishing the configuration file
 
-Alternative to adding a variable into your `.env` you can publish a config file and add your token in
-the `config/line-notify.php` file
+Alternatively to adding a variable into your `.env`, you can publish `config/line-notify.php` file and add your token
+there.
 
 Run the following Artisan command in your terminal:
 
