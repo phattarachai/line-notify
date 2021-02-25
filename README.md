@@ -2,9 +2,7 @@
 
 **The package for Laravel and PHP for Line application notification.**
 
-[comment]: <> ([![Travis]&#40;https://travis-ci.org/corcel/corcel.svg?branch=master&#41;]&#40;https://travis-ci.org/corcel/corcel?branch=master&#41;)
 [![Packagist](https://img.shields.io/packagist/dt/phattarachai/line-notify.svg)](https://github.com/phattarachai/line-notify/releases)
-[comment]: <> ([![Test Coverage]&#40;https://codeclimate.com/github/corcel/corcel/badges/coverage.svg&#41;]&#40;https://codeclimate.com/github/corcel/corcel/coverage&#41;)
 [![Maintainability](https://api.codeclimate.com/v1/badges/600b42e19f568f18d8ab/maintainability)](https://codeclimate.com/github/phattarachai/line-notify/maintainability)
 
 Line Notify is a package for Laravel and PHP application to easily send notification to Line messaging application users
