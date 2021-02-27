@@ -132,7 +132,7 @@ $line->send('message');
 
 ## Support Me
 
-<a href="https://store.line.me/stickershop/product/14535782">
+<a href="https://store.line.me/stickershop/product/14535782" target="_blank">
     <img src="https://me.phattarachai.dev/wp-content/uploads/2021/02/Banner.png"
         alt="Sticker Line 500 Internal Server Error by phattarachai.dev" width="30%" />
 </a>
