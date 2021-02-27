@@ -138,7 +138,7 @@ $line->send('message');
 </a>
 
 I love creating Laravel and PHP packages to help making Web developer life easier. You can support me by buying my LINE
-stickers from the [https://store.line.me/stickershop/product/14535782](LINE Store).
+stickers from the [LINE Store](https://store.line.me/stickershop/product/14535782).
 
 ## Credit
 
@@ -148,7 +148,7 @@ If my package make your life easier, please consider:
 
 <a href="https://ko-fi.com/phattarachai#checkoutModal" target="_blank">Buy me a Coffee</a> |
 
-<a href="https://twitter.com/phatchai" target="_blank">Follow Me on Twitter</a>S
+<a href="https://twitter.com/phatchai" target="_blank">Follow Me on Twitter</a>
 
 ## License
 
