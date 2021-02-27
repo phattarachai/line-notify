@@ -128,13 +128,13 @@ $line->send('message');
 
 ## Screenshot
 
-<h1 align="center"><img src="/art/screenshot.jpg" alt="Screenshot" width="30%"></h1>
+<img src="/art/screenshot.jpg" alt="Screenshot" width="30%">
 
 ## Support Me
 
 <a href="https://store.line.me/stickershop/product/14535782" target="_blank">
     <img src="https://me.phattarachai.dev/wp-content/uploads/2021/02/Banner.png"
-        alt="Sticker Line 500 Internal Server Error by phattarachai.dev" width="30%" />
+        alt="Sticker Line 500 Internal Server Error by phattarachai.dev" width="45%" />
 </a>
 
 I love creating Laravel and PHP packages to help making Web developer life easier. You can support me by buying my LINE
