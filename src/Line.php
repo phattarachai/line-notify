@@ -9,16 +9,16 @@ use GuzzleHttp\Exception\GuzzleException;
 
 class Line
 {
-    protected Client $client;
-    protected string $token;
-    protected ?string $thumbnailUrl = null;
-    protected ?string $imageUrl = null;
-    protected ?string $imagePath = null;
-    protected bool $notificationDisabled = false;
-    protected ?int $stickerPackageId = null;
-    protected ?int $stickerId = null;
+    protected $client;
+    protected $token;
+    protected $thumbnailUrl = null;
+    protected $imageUrl = null;
+    protected $imagePath = null;
+    protected $notificationDisabled = false;
+    protected $stickerPackageId = null;
+    protected $stickerId = null;
 
-    const URL = 'https://notify-api.line.me/api/notify';
+    public const URL = 'https://notify-api.line.me/api/notify';
 
     public function __construct(string $token = '')
     {
@@ -134,7 +134,7 @@ class Line
                 'name' => 'imageFile',
                 'contents' => fopen($this->imagePath, 'r')
             ];
-            
+
         }
 
         if ($this->imageUrl !== null) {

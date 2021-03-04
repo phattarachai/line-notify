@@ -12,11 +12,11 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "phattarachai",
+      "name": "Phattarachai Chaimongkol",
       "email": "phatchai28@gmail.com"
     }
   ],
-  "homepage": "https://github.com/phattarachai/line-notify",
+  "homepage": "https://phattarachai.dev",
   "require": {
     "php": "^7.3|^8.0",
     "guzzlehttp/guzzle": "^7.2",
