@@ -34,6 +34,7 @@ class Line
     public function setToken(string $token)
     {
         $this->token = $token;
+        return $this;
     }
 
     public function thumbnailUrl(string $url): Line
