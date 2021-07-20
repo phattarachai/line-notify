@@ -22,7 +22,7 @@ class Line
 
     public function __construct(string $token = '')
     {
-        $this->client = new Client;
+        $this->client = new Client(['verify' => false]);
         $this->token = $token;
     }
 
