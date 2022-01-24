@@ -1,4 +1,4 @@
-<h1 align="center"><img src="/art/line-notify-banner.jpg" alt="Line Notify"></h1>
+<img src="/art/line-notify-banner.jpg" alt="Line Notify">
 
 **The package for Laravel and PHP for Line application notification.**
 
@@ -97,6 +97,19 @@ return [
 ];
 ```
 
+## สนับสนุนผู้พัฒนา
+
+สวัสดีครับ ผมอ๊อฟนะครับ เป็น Full Stack Web Developer มีสร้าง package ขึ้นมาใช้งานในโปรเจคตัวเองที่ใช้งานบ่อย ๆ
+ถ้ามีข้อเสนอแนะอยากให้ทำ package อะไรบน PHP / Laravel / NodeJS / Python หรือภาษาอื่น ๆ ทักทายมาได้เลยครับ line:
+phat-chai
+
+รับงาน Freelance หากมีโปรเจคที่น่าสนใจ หาทีมงานร่วมงาน หาโปรแกรมเมอร์ที่มีประสบการณ์ช่วยแก้โจทย์ที่ท้าทาย
+ติดต่อมาได้เลยครับ เข้ามาดูผลงานได้ที่ https://phattarachai.dev ยินดีให้ความช่วยเหลือและรอสร้างผลงานที่ดีร่วมกันครับ
+
+<a href="https://phattarachai.dev">
+    <img src="/art/phattarachai.dev.png" alt="https://phattarachai.dev" width="419px" />
+</a>
+
 ## Configuring (Laravel)
 
 ### <a name="config-auto-discovery"></a> Laravel 5.5 and newer
@@ -129,16 +142,6 @@ $line->send('message');
 ## Screenshot
 
 <img src="/art/screenshot.jpg" alt="Screenshot" width="30%">
-
-## Support Me
-
-<a href="https://store.line.me/stickershop/product/14535782" target="_blank">
-    <img src="https://me.phattarachai.dev/wp-content/uploads/2021/02/Banner.png"
-        alt="Sticker Line 500 Internal Server Error by phattarachai.dev" width="45%" />
-</a>
-
-I love creating Laravel and PHP packages to help making Web developer life easier. You can support me by buying my LINE
-stickers from the [LINE Store](https://store.line.me/stickershop/product/14535782).
 
 ## Credit
 
