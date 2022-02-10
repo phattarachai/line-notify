@@ -2,6 +2,7 @@
 
 **The package for Laravel and PHP for Line application notification.**
 
+[![Latest Version](https://img.shields.io/packagist/v/phattarachai/line-notify.svg**)](https://github.com/phattarachai/line-notify/releases)
 [![Packagist](https://img.shields.io/packagist/dt/phattarachai/line-notify.svg)](https://github.com/phattarachai/line-notify/releases)
 [![Maintainability](https://api.codeclimate.com/v1/badges/600b42e19f568f18d8ab/maintainability)](https://codeclimate.com/github/phattarachai/line-notify/maintainability)
 
