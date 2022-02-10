@@ -6,17 +6,18 @@ namespace Phattarachai\LineNotify;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
+use Psr\Http\Message\ResponseInterface;
 
 class Line
 {
-    protected $client;
-    protected $token;
-    protected $thumbnailUrl = null;
-    protected $imageUrl = null;
-    protected $imagePath = null;
-    protected $notificationDisabled = false;
-    protected $stickerPackageId = null;
-    protected $stickerId = null;
+    protected Client $client;
+    protected string $token;
+    protected ?string $imageUrl = null;
+    protected ?string $imagePath = null;
+    protected ?string $stickerId = null;
+    protected ?string $thumbnailUrl = null;
+    protected ?string $stickerPackageId = null;
+    protected bool $notificationDisabled = false;
 
     public const URL = 'https://notify-api.line.me/api/notify';
 
@@ -31,7 +32,7 @@ class Line
      *
      * @param string $token the token of Line notify
      */
-    public function setToken(string $token)
+    public function setToken(string $token): Line
     {
         $this->token = $token;
         return $this;
@@ -55,7 +56,7 @@ class Line
         return $this;
     }
 
-    public function sticker(int $sticker_package_id, int $sticker_id)
+    public function sticker(int $sticker_package_id, int $sticker_id): Line
     {
         $this->stickerPackageId = $sticker_package_id;
         $this->stickerId = $sticker_id;
@@ -90,11 +91,11 @@ class Line
     }
 
     /**
-     * @param \Psr\Http\Message\ResponseInterface $response
+     * @param ResponseInterface $response
      * @return bool
      * @throws \JsonException
      */
-    protected function isSuccess(\Psr\Http\Message\ResponseInterface $response): bool
+    protected function isSuccess(ResponseInterface $response): bool
     {
         $json = json_decode((string)$response->getBody(), true, 512, JSON_THROW_ON_ERROR);
 
