@@ -11,7 +11,7 @@ use Psr\Http\Message\ResponseInterface;
 class Line
 {
     protected Client $client;
-    protected string $token;
+    protected ?string $token;
     protected ?string $imageUrl = null;
     protected ?string $imagePath = null;
     protected ?string $stickerId = null;
