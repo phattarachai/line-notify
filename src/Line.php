@@ -21,7 +21,7 @@ class Line
 
     public const URL = 'https://notify-api.line.me/api/notify';
 
-    public function __construct(string $token = '')
+    public function __construct(string $token = null)
     {
         $this->client = new Client(['verify' => false]);
         $this->token = $token;
@@ -108,6 +108,10 @@ class Line
      */
     protected function params(string $message): array
     {
+        if ($this->token === null) {
+            throw new \Exception('Please specify line-notify access token');
+        }
+
         return [
             'headers' => [
                 'Authorization' => 'Bearer ' . $this->token,
