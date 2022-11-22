@@ -21,7 +21,7 @@ class Line
 
     public const URL = 'https://notify-api.line.me/api/notify';
 
-    public function __construct(string $token = null)
+    public function __construct(?string $token = null)
     {
         $this->client = new Client(['verify' => false]);
         $this->token = $token;
