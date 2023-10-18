@@ -36,6 +36,15 @@ use Phattarachai\LineNotify\Facade\Line;
 Line::send('message');
 ```
 
+You can use setToken() to specify other ACCESS_TOKEN you want to use beside from the .env.
+
+```php
+use Phattarachai\LineNotify\Facade\Line;
+
+Line::setToken(/*...access token */)
+    ->send('message');
+```
+
 Send a message with an image.
 
 ```php
