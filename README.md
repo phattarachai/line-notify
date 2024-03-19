@@ -103,7 +103,7 @@ You can set the token in this file.
 ```php
 // File: /config/line-notify.php
 return [
-    'access_token' => env('LINE_ACCESS_TOKEN', null),
+    'access_token' => env('LINE_ACCESS_TOKEN'),
 ];
 ```
 
