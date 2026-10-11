@@ -1,6 +1,7 @@
 {
   "name": "phattarachai/line-notify",
   "description": "PHP and Laravel API for Line application notification.",
+  "abandoned": true,
   "type": "library",
   "keywords": [
     "phattarachai",

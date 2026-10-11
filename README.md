@@ -1,5 +1,10 @@
 <img src="/art/line-notify-banner.jpg" alt="Line Notify">
 
+> [!CAUTION]
+> **This package is abandoned.** LINE shut down the LINE Notify service on 31 March 2025, so this package can no longer send anything.
+> To send LINE notifications from Laravel, push messages through the [LINE Messaging API](https://developers.line.biz/en/docs/messaging-api/overview/) of a LINE Official Account instead.
+> A walkthrough in Thai: [ส่งแจ้งเตือนเข้า LINE จาก Laravel](https://phattarachai.dev/blog/line-notify-laravel-php).
+
 **The package for Laravel and PHP for Line application notification.**
 
 [![Latest Version](https://img.shields.io/packagist/v/phattarachai/line-notify.svg)](https://github.com/phattarachai/line-notify/releases)
